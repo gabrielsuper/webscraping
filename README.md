@@ -4,7 +4,7 @@ Projeto de Web Scrapping com Python para busca de modelos de notebook Lenovo
 
 ## Primeiros passos
 
-Extrair o arquivo ```webscraping-main``` dentro de uma pasta local em seu computador. É necessário o download do [Python](https://www.python.org/) e instalar para executar o projeto.
+Baixe os arquivos pelo [Link](https://github.com/gabrielsuper/webscraping/archive/refs/heads/main.zip) e depois extrair o arquivo ```webscraping-main``` dentro de uma pasta local em seu computador. É necessário o download do [Python](https://www.python.org/) e instalar para executar o projeto.
 
 ## Instalação dos módulos
 
