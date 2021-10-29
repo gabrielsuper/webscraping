@@ -10,14 +10,14 @@ Extrair o arquivo ```webscraping-main``` dentro de uma pasta local em seu comput
 
 Para execução correta do arquivo é importando instalar os módulos, acessando o terminal e executando o comando ```pip install "nome do modulo"```.
 Exemplo:
-
+```
 pip install json
 pip install flask
 pip install os
 pip install pandas
 pip install bs4
 pip install requests
-
+```
 Após a instalação de todos os módulos execute seu terminal python o arquivo api.py, exemplo: python api.py
 Pode ser executado também no terminal do linux, windows ou vscode.
 
