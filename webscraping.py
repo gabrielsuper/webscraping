@@ -2,16 +2,29 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from time import sleep
+import os
 
 
 #Função para consultar os dados da página por meio do webscraping e criar o json dos dados
 def execWebScraping():
-    
-    #Consulta por meio da biblioteca requests as informações da url
-    response = requests.get('https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops')
+    #Consulta o diretorio raiz onde o arquivo webscrapinp.py se encontra ex : C:
+    DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    #Seta na var PATH o caminho do chrome driver
+    PATH = DIR + "\WEBSCRAPING\chromedriver.exe"
 
-    #Atribui o contéudo html da página na variável content
-    content = response.content
+    #Atribui o valor da url e consulta por meio do webdriver
+    url_laptops = "https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops"
+    driver = webdriver.Chrome(PATH)
+    driver.get(url_laptops)
+    sleep(5)
+
+    #Consulta o conteudo do html e insere na variável content
+    element_page = driver.find_element_by_xpath("//html")
+    content = element_page.get_attribute('outerHTML')
+
     #Formata os dados da variável content em html e atribui para a variável page
     page = BeautifulSoup(content, 'html.parser')
     #Procura na page todas as div's que possuem a class caption
@@ -40,3 +53,5 @@ def execWebScraping():
     doc = open('products.json', 'w')
     doc.write(dados)
     doc.close()
+
+    driver.quit()
