@@ -1,6 +1,6 @@
 # Projeto WebScraping com API Flask
 
-Projeto de Web Scrapping com Python para busca de modelos de notebook Lenovo
+Projeto de Web Scrapping com Python para busca de modelos de notebook Lenovo do site [webscraper.io](https://webscraper.io/test-sites/e-commerce/allinone/computers/laptops) 
 
 ## Primeiros passos
 
